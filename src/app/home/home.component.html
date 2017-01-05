@@ -30,7 +30,7 @@
 
   <div>
     <md-grid-list cols="4" rowHeight="100px">
-      <md-grid-tile class="spooky-font orange-to-red" *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+      <md-grid-tile class="spooky-font orange-to-red black-bordered" *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
       [style.background]="tile.black"
       [style.font-size]="tile.size">
         {{tile.text}}

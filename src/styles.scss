@@ -21,14 +21,13 @@ body {
   background-color: black;
 }
 
-.spooky-font {
-  color: white;
-  font-family: 'Nothing You Could Do', cursive;
+.black-bordered {
   border: 2px solid black;
 }
 
-.outerContainer {
-  overflow: hidden;
+.spooky-font {
+  color: white;
+  font-family: 'Nothing You Could Do', cursive;
 }
 
 /* Images */
@@ -94,5 +93,23 @@ body {
   }
 }
 
+.outerContainer {
+  overflow: hidden;
+}
 
+/* Page Not Found */
 
+.fin-centered {
+  text-align: center;
+  font-size: 4rem;
+  padding-top: 10rem;
+
+  h2 {
+    font-size: 5rem;
+  }
+}
+
+.return-button {
+  padding: 4rem;
+  font-size: 4rem;
+}
