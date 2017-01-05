@@ -10,12 +10,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MonstersComponent } from './monsters/monsters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    MonstersComponent
   ],
   imports: [
     MaterialModule.forRoot(),
@@ -25,6 +27,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AppRoutingModule
   ],
   providers: [],
+  exports: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
