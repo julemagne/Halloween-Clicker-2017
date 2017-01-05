@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/core/theming/all-theme';
+@include md-core();
+$primary: md-palette($md-grey, 900);
+$accent:  md-palette($md-orange, 600, A100, A400);
+$warn:    md-palette($md-red, A700);
+
+$theme: md-dark-theme($primary, $accent, $warn);
+@include angular-material-theme($theme);
+
+/* General site-wide stuff */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  color: white;
+  background-color: black;
+}
+
+.spooky-font {
+  color: white;
+  font-family: 'Nothing You Could Do', cursive;
+  border: 2px solid black;
+}
+
+/* Animation */
+
+.orange-to-red {
+  color: orange;
+  -webkit-transition: color 2s; /* Safari */
+  -webkit-transition-timing-function: ease-in-out; /* Safari */
+  transition: color 2s;
+  transition-timing-function: ease-in-out;
+
+  &:hover {
+    color: red;
+  }
+}
+
+.left-to-right-animation {
+  padding-left: 0;
+  margin-left: 0;
+  height: 100px;
+  background-color: red;
+  -webkit-transition-property: margin-left; /* Safari */
+  -webkit-transition-duration: 2s; /* Safari */
+  transition-property: margin-left;
+  transition-duration: 2s;
+
+  &:hover {
+    margin-left: 100%;
+  }
+}
+
+
+

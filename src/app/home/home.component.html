@@ -1,0 +1,18 @@
+<div>
+  <md-toolbar color="primary">
+    <button md-raised-button color="primary">Primary</button>
+    <button md-raised-button color="accent">Accent</button>
+    <button md-raised-button color="warn">Warn</button>
+    <div class="left-to-right-animation" style="height: 100px;width: 100px;"></div>
+  </md-toolbar>
+
+  <div>
+    <md-grid-list cols="4" rowHeight="100px">
+      <md-grid-tile class="spooky-font orange-to-red" *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+      [style.background]="tile.black"
+      [style.font-size]="tile.size">
+        {{tile.text}}
+      </md-grid-tile>
+    </md-grid-list>
+  </div> 
+</div>
