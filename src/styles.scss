@@ -27,6 +27,10 @@ body {
   border: 2px solid black;
 }
 
+.outerContainer {
+  overflow: hidden;
+}
+
 /* Images */
 
 .bat {
@@ -49,18 +53,44 @@ body {
 }
 
 .left-to-right-animation {
-  animation-duration: 10s;
+  animation-duration: 15s;
   animation-name: slidein;
   animation-iteration-count: infinite;
 }
 
 @keyframes slidein {
   from {
-    margin-left: -40%;
+    margin-left: -20%;
   }
 
   to {
-    margin-left: 140%;
+    margin-left: 120%;
+  }
+}
+
+.flight-path {
+  animation: shake 0.82s cubic-bezier(0.895, 0.030, 0.685, 0.220) both;
+  transform: translate3d(0, 40px, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(20px, 50px, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-40px, 50px, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(30px, -30px, 0);
   }
 }
 
