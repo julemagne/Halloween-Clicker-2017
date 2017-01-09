@@ -35,7 +35,7 @@ export class MonstersComponent implements OnInit {
     if (i != monstersLength) {
       this.monster = this.monsters[i+1];
     } else {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/win']);
     }
   }
 

@@ -11,13 +11,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MonstersComponent } from './monsters/monsters.component';
+import { WinComponent } from './win/win.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PageNotFoundComponent,
-    MonstersComponent
+    MonstersComponent,
+    WinComponent
   ],
   imports: [
     MaterialModule.forRoot(),

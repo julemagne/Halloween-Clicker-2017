@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { MonstersComponent } from './monsters/monsters.component';
+import { WinComponent } from './win/win.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
@@ -11,6 +12,9 @@ const appRoutes: Routes = [
   },
   { path: 'play', 
     component: MonstersComponent 
+  },
+  { path: 'win', 
+    component: WinComponent 
   },
   { path: '',   
     redirectTo: '/home', 
