@@ -7,7 +7,6 @@ import { MonsterService } from './shared/monster.service';
   moduleId: 'module.id',
   selector: 'app-monsters',
   templateUrl: './monsters.component.html',
-  styleUrls: ['./monsters.component.scss'],
   providers: [MonsterService]
 })
 
