@@ -5,7 +5,7 @@
 /)___)</br>
 /" "</br>
 
-Fun (I hope!) Halloween clicker game I built with [Material Design for Angular 2](https://github.com/angular/material2), CSS animations, Sass, my illustrations, and surprises.
+Fun (I hope!) Halloween clicker game I built with [Material Design for Angular 2](https://github.com/angular/material2), CSS and SVG animations, Sass, my illustrations, and surprises.
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
 
