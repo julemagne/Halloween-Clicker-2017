@@ -1,1 +1,2 @@
-<p (click)='cycle()'>{{this.monster.name}}</p>
+<p *ngIf="!monster.name" (click)='startCycle()'>Click to play!</p>
+<p *ngIf="monster" (click)='cycle()'>{{this.monster.name}}</p>

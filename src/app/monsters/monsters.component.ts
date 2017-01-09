@@ -4,6 +4,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Monster } from './shared/monster.model';
 import { MonsterService } from './shared/monster.service';
 
+import { sample } from '../shared/sample.function';
+
 @Component({
   moduleId: 'module.id',
   selector: 'app-monsters',
@@ -22,19 +24,27 @@ export class MonstersComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.setMonsters();
+  }
+
+  setMonsters() {
     this.monsterService.getMonsters()
       .then(monsters => {
-        this.monsters = monsters
-        this.monster = this.monsters[0]
+        this.monsters = Array.from(monsters)
       });
   }
 
+  startCycle() {
+    this.cycle();
+  }
+
   cycle() {
-    let i = this.monsters.indexOf(this.monster);
-    let monstersLength = this.monsters.length-1;
-    if (i != monstersLength) {
-      this.monster = this.monsters[i+1];
+    let monstersArray = this.monsters;
+    let monstersLength = monstersArray.length;
+    if (monstersLength != 0) {
+      this.monster = sample(monstersArray);
     } else {
+      this.setMonsters();
       this.router.navigate(['/win']);
     }
   }
