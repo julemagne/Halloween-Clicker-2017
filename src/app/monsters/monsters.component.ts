@@ -17,6 +17,7 @@ export class MonstersComponent implements OnInit {
   
   monsters: Monster[] = [];
   monster: Monster = new Monster;
+  scream: HTMLAudioElement = new Audio('../assets/audio/scream.mp3');
 
   constructor(
     private monsterService: MonsterService,
@@ -41,12 +42,25 @@ export class MonstersComponent implements OnInit {
   cycle() {
     let monstersArray = this.monsters;
     let monstersLength = monstersArray.length;
-    if (monstersLength != 0) {
+    if (monstersLength === 1) {
+      this.delayScream();
+      this.monster = sample(monstersArray);
+    } else if (monstersLength != 0) {
       this.monster = sample(monstersArray);
     } else {
       this.setMonsters();
       this.router.navigate(['/win']);
     }
+  }
+
+  delayScream() {
+    window.setTimeout(() => {
+      this.playScream();
+    }, 500);
+  }
+
+  playScream() {
+    this.scream.play();
   }
 
 }
