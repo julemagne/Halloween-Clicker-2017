@@ -1,4 +1,4 @@
-export function sample(array: Array<any>) {
+export function sampleAndRemove(array: Array<any>) {
   let index = Math.floor(Math.random() * array.length);
   let monster = array[index];
   array.splice(index, 1);

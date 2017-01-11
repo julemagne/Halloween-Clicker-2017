@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Monster } from './shared/monster.model';
 import { MonsterService } from './shared/monster.service';
 
-import { sample } from '../shared/sample.function';
+import { sampleAndRemove } from '../shared/sampleAndRemove.function';
 
 @Component({
   moduleId: 'module.id',
@@ -44,9 +44,9 @@ export class MonstersComponent implements OnInit {
     let monstersLength = monstersArray.length;
     if (monstersLength === 1) {
       this.delayScream();
-      this.monster = sample(monstersArray);
+      this.monster = sampleAndRemove(monstersArray);
     } else if (monstersLength != 0) {
-      this.monster = sample(monstersArray);
+      this.monster = sampleAndRemove(monstersArray);
     } else {
       this.setMonsters();
       this.router.navigate(['/win']);
