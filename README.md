@@ -1,8 +1,8 @@
 # Halloween Clicker 2017
 
-.____.</br>
+ ,._ _ _ _.,</br>
 {◉,◉}</br>
-/)___)</br>
+/)_ _ _)</br>
 /" "</br>
 
 Fun (I hope!) Halloween clicker game I built with [Material Design for Angular 2](https://github.com/angular/material2), CSS and SVG animations, Sass, my illustrations, and surprises.
