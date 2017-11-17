@@ -14,7 +14,7 @@ import { sampleAndRemove } from '../shared/sampleAndRemove.function';
 })
 
 export class MonstersComponent implements OnInit {
-  
+
   monsters: Monster[] = [];
   monster: Monster = new Monster;
   scream: HTMLAudioElement = new Audio('../assets/audio/scream.mp3');
@@ -32,11 +32,8 @@ export class MonstersComponent implements OnInit {
     this.monsterService.getMonsters()
       .then(monsters => {
         this.monsters = Array.from(monsters)
+        this.cycle();
       });
-  }
-
-  startCycle() {
-    this.cycle();
   }
 
   cycle() {

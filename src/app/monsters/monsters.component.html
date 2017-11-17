@@ -1,15 +1,11 @@
 <div class="outerContainer">
 
-  <p *ngIf="!monster.name" (click)='startCycle()' class="fin-centered">
-    Click to play!
-  </p>
-
   <p *ngIf="!this.monster.image" (click)='cycle()' class="fin-centered">
     {{this.monster.name}}
   </p>
-  
+
   <p>
-    <img *ngIf="this.monster.image" (click)='cycle()' class="left-to-right-animation" 
+    <img *ngIf="this.monster.image" (click)='cycle()' class="monster-animation"
     src="{{this.monster.image}}" alt="this.monster.name">
   </p>
 
